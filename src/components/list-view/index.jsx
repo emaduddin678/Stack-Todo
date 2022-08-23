@@ -1,25 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ListGroup, ListGroupItem, CustomInput, Button } from "reactstrap";
-import Todos from "../todos";
+import { ListGroup, ListGroupItem,  Button, Input } from "reactstrap";
 
 // List Item component
-const ListItem = ({ todo, toggleSelect }) => {
+const ListItem = ({ todo, toggleSelect, toggleComplete }) => {
   return (
-    <ListGroupItem className="d-flex align-items-center">
-      <CustomInput
-        type="checkbox"
-        id={todo.id}
-        checked={todo.isSelect}
-        onChange={() => toggleSelect(todo.id)}
-      />
-      <div className="mx-3">
-        <h4>{todo.text}</h4>
-        <p>{todo.time.toDateString()}</p>
+    <ListGroupItem className="d-flex align-items-center justify-content-between">
+      <div className="d-flex align-items-center">
+        <Input
+          type="checkbox"
+          id={todo.id}
+          checked={todo.isSelect}
+          onChange={() => toggleSelect(todo.id)}
+        />
+        <div className="mx-3">
+          <h4>{todo.text}</h4>
+          <p>{todo.time.toDateString()}</p>
+        </div>
       </div>
       <Button
         className="ml-auto"
-        color="{todo.isComplete ? 'danger': 'success'}"
+        color={todo.isComplete ? "danger" : "success"}
         onClick={() => toggleComplete(todo.id)}
       >
         {todo.isComplete ? "Completed" : "Running"}
@@ -51,7 +52,7 @@ const ListView = ({ todos, toggleSelect, toggleComplete }) => {
 
 
 ListView.propTypes = {
-  todo: PropTypes.object.isRequired,
+  todos: PropTypes.object.isRequired,
   toggleSelect: PropTypes.func.isRequired,
   toggleComplete: PropTypes.func.isRequired,
 };
