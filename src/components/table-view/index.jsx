@@ -4,14 +4,14 @@ import { Button,   Input,   Table } from "reactstrap";
 
 const RowItem = ({ todo, toggleSelect, toggleComplete }) => (
   <tr>
-    <td scope="row">
+    <th scope="row">
       <Input
         type="checkbox"
         id={todo.id}
         checked={todo.isSelect}
         onChange={() => toggleSelect(todo.id)}
       />
-    </td>
+    </th>
     <td>{todo.time.toDateString()};</td>
     <td>{todo.text}</td>
     <td>
@@ -50,7 +50,7 @@ const TableView = ({ todos, toggleSelect, toggleComplete }) => (
           toggleComplete={toggleComplete}
         />
       ))}
-    </tbody>
+    </tbody> 
   </Table>
 );
 
