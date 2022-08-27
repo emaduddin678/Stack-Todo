@@ -7,7 +7,7 @@ function App() {
     <Container className="my-3">
       <Row>
         <Col>
-          <Todos/>
+          <Todos />
         </Col>
       </Row>
     </Container>

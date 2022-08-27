@@ -13,9 +13,12 @@ const Controller = ({
   handleSearch,
   toggleForm,
   handleFilter,
+  color1,
+  color2,
+  color3,
   clearSelected,
   clearCompleted,
-  reset
+  reset,
 }) => (
   <div>
     <SearchPanel
@@ -25,7 +28,12 @@ const Controller = ({
     />
     <Row className="my-4">
       <Col md={{ size: 4 }}>
-        <FilterController handleFilter={handleFilter} />
+        <FilterController
+          handleFilter={handleFilter}
+          color1={color1}
+          color2={color2}
+          color3={color3}
+        />
       </Col>
       <Col md={{ size: 4 }}>
         <ViewController view={view} changeView={changeView} />
@@ -55,4 +63,4 @@ Controller.propTypes = {
   reset: PropTypes.func.isRequired,
 };
 
-export default Controller; 
+export default Controller;

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ListGroup, ListGroupItem,  Button, Input } from "reactstrap";
+import { ListGroup, ListGroupItem, Button, Input } from "reactstrap";
 
 // List Item component
 const ListItem = ({ todo, toggleSelect, toggleComplete }) => {
@@ -49,7 +49,6 @@ const ListView = ({ todos, toggleSelect, toggleComplete }) => {
     </ListGroup>
   );
 };
-
 
 ListView.propTypes = {
   todos: PropTypes.object.isRequired,

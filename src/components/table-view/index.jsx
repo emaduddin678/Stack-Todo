@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button,   Input,   Table } from "reactstrap";
+import { Button, Input, Table } from "reactstrap";
 
 const RowItem = ({ todo, toggleSelect, toggleComplete }) => (
   <tr>
@@ -50,10 +50,9 @@ const TableView = ({ todos, toggleSelect, toggleComplete }) => (
           toggleComplete={toggleComplete}
         />
       ))}
-    </tbody> 
+    </tbody>
   </Table>
 );
-
 
 TableView.propTypes = {
   todos: PropTypes.object.isRequired,

@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 
 class CreateTodoForm extends React.Component {
@@ -44,10 +44,10 @@ class CreateTodoForm extends React.Component {
       </Form>
     );
   }
-};
+}
 
 CreateTodoForm.propTypes = {
-    createTodo: PropTypes.func.isRequired
-}
+  createTodo: PropTypes.func.isRequired,
+};
 
 export default CreateTodoForm;
